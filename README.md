@@ -134,8 +134,6 @@
     
 - Implement cloud storage for automatic backup of the Capture Agent.
     
-- Add auto-captioning for accessibility.
-    
 - Introduce remote monitoring and control via a web dashboard.
     
 
@@ -152,7 +150,7 @@
 | Find all files starting with “sed” in a folder                               | `find /path/to/folder -name "sed*"`                                                                                                                                 |
 | Determine the total size of a folder and all the files it contains           | `du -sh /path/to/folder`                                                                                                                                            |
 | Determine which process running on the server is allocated a particular port | `sudo lsof -i :port_number` or `netstat -tulnp`                                                                                                                     |
-| List the devices connected to the PC which has a particular name             | `lsusb \| grep "Device_Name"` for USB;<br>`lspci \| grep "Device_Name"` for PCI;<br>`lsblk \| grep "name"` for Storage;<br>`hwinfo \| grep "name"` for all hardware |
+| List the devices connected to the PC which has a particular name             | `lsusb \| grep "Device_Name"` for USB;<br>`lspci \| grep "Device_Name"` for PCI;<br>`lsblk \| grep "name"` for storage;<br>`hwinfo \| grep "name"` for all hardware |
 
 #### **2. Which folder in Linux would you normally find…?**
 
@@ -182,7 +180,7 @@ The script supports two ways to specify the servers:
 
 - **Command-line arguments**: You can pass server addresses directly.
     
-- **Text file**: You can provide a `.txt` file (e.g., `servers.txt`) containing a list of servers to check. If no `.txt` file is provided, script will look for `servers.txt` in the same folder.
+- **Text file**: You can provide a `.txt` file (e.g., `servers.txt`) containing a list of servers to check. If no `.txt` file is provided, the script will look for `servers.txt` in the same folder. A test `servers.txt` file is provided for testing.
     
 
 The script then generates a summary report on the connectivity status of the servers, saving any unreachable servers into an `error.log` file.
@@ -229,7 +227,13 @@ If Python is not installed, download and install the latest version from [python
 
 1. Navigate to the directory where `pingy.py` is located.
     
-2. To check connectivity for servers from a `.txt` file, use the following command:
+2. To check connectivity for servers from the provided `servers.txt` file, use the following command:
+    
+    ```bash
+    python pingy.py
+    ```
+
+3. To check connectivity for servers from any other `.txt` file, use the following command:
     
     ```bash
     python pingy.py <path_to_your_txt_file>
@@ -238,7 +242,7 @@ If Python is not installed, download and install the latest version from [python
     For example:
     
     ```bash
-    python pingy.py servers.txt
+    python pingy.py my_servers.txt
     ```
     
 3. To check connectivity for servers directly passed as arguments, use:
@@ -268,6 +272,6 @@ python pingy.py example.com example2.com
     
 - The summary of the server statuses will be printed in the terminal.
     
-- Any unreachable servers will be written to an `error.log` file in the same directory.
+- Any unreachable servers will be written to an `error.log` file in the same directory. If all servers respond, an empty `error.log` file will be created.
     
 
