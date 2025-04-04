@@ -150,7 +150,7 @@
 | Find all files starting with “sed” in a folder                               | `find /path/to/folder -name "sed*"`                                                                                                                                 |
 | Determine the total size of a folder and all the files it contains           | `du -sh /path/to/folder`                                                                                                                                            |
 | Determine which process running on the server is allocated a particular port | `sudo lsof -i :port_number` or `netstat -tulnp`                                                                                                                     |
-| List the devices connected to the PC which has a particular name             | `lsusb \| grep "Device_Name"` for USB;<br>`lspci \| grep "Device_Name"` for PCI;<br>`lsblk \| grep "name"` for storage;<br>`hwinfo \| grep "name"` for all hardware |
+| List the devices connected to the PC which has a particular name             | `lsusb \| grep "name"` for USB;<br>`lspci \| grep "name"` for PCI;<br>`lsblk \| grep "name"` for storage;<br>`hwinfo \| grep "name"` for all hardware |
 
 #### **2. Which folder in Linux would you normally find…?**
 
