@@ -28,13 +28,13 @@
         
     - 8GB RAM or more
         
-    - 128GB SSD storage for fast performance
+    - 128GB SSD storage or more for fast performance
         
     - HDMI output for external display
         
     - Gigabit PCI Express Network Adapter
         
-    - USB ports
+    - USB ports X 4 or more
         
 
 - **Software:**
@@ -69,7 +69,7 @@
         
     - Gigabit PCI Express Network Adapter  for Opencast integration
         
-    - USB ports
+    - USB ports X 4 or more
         
 
 #### **4. Why would there be 2 microphones used in this configuration?**
@@ -85,9 +85,9 @@
 
 - SDI (Serial Digital Interface) supports higher-quality video transmission than HDMI.
     
-- It allows longer cable runs without signal degradation (HDMI signals degrade after 12 meters).
+- It allows longer cable runs without signal degradation (100m VS 3m for HDMI).
     
-- It supports embedded audio and timecode, reducing cable clutter and capturing extra data.
+- It supports embedded audio and timecode, reducing cable clutter and capturing additional data.
     
 - It provides a secure twist-lock locking mechanism for professional setups.
     
@@ -120,7 +120,7 @@
     
 - Install a USB cable between the `Capture Agent` and the `DSP` to be able to record audio from the `Mic` and `Lapel Mic` without using the `Sony NX3` if video is not required. The `Capture Agent` and the `DSP` sit in the same rack.
     
-- Replace the 10m USB extension with a shorter cable, if the device at the end of it can be moved closer, or as an alternative a CAT 6E solution if that is not possible. This assumes that this cable is in fact required.
+- Replace the `10m USB extension` with a USB cable of >3m, if the devices at the end of it can be moved closer. Alternatively, if the devices cannot be moved closer, implement a [Active USB Cable](https://www.takealot.com/usb-2-0-active-extension-cable-10m/PLID44484002?srsltid=AfmBOooizpj5UAPOSmaY7XWEtaA9cLJk35ZL5b2MIzcs1kJvcwHhuLH4) or [USB-to-Ethernet Extenders](https://www.takealot.com/usb-to-ethernet-adapter-usb-to-ethernet-extension/PLID72477084) with CAT 6E cable solution if that is not possible. This assumes that this cable is in fact required.
     
 - Unplug the `Keyboard and Mouse` from the `USB HUB` and plug it directly into the `Capture Agent`.
     
