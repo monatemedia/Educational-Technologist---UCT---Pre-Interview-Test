@@ -1,0 +1,19 @@
+# Server Connectivity Check - Error Report
+# Generated on: 2025-04-04 11:25:23
+
+| Server | DNS | HTTP | Ping |
+|--------------------------------------------------|----------|----------|----------|
+| prod-web01.example.com | **FAIL** | **FAIL** | **FAIL** |
+| prod-web02.example.com | **FAIL** | **FAIL** | **FAIL** |
+| prod-db01.example.com | **FAIL** | **FAIL** | **FAIL** |
+| prod-cache01.example.com | **FAIL** | **FAIL** | **FAIL** |
+| dev-web01.example.com | **FAIL** | **FAIL** | **FAIL** |
+| dev-db01.example.com | **FAIL** | **FAIL** | **FAIL** |
+| test-web01.example.com | **FAIL** | **FAIL** | **FAIL** |
+| test-api01.example.com | **FAIL** | **FAIL** | **FAIL** |
+| lb01.example.com | **FAIL** | **FAIL** | **FAIL** |
+| lb02.example.com | **FAIL** | **FAIL** | **FAIL** |
+| offline-server.example.com | **FAIL** | **FAIL** | **FAIL** |
+| decommissioned.example.com | **FAIL** | **FAIL** | **FAIL** |
+| 192.168.100.254 | OK | **FAIL** | **FAIL** |
+| 10.11.12.13 | OK | **FAIL** | **FAIL** |

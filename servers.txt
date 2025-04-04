@@ -1,0 +1,30 @@
+# Production servers
+prod-web01.example.com
+prod-web02.example.com
+prod-db01.example.com
+prod-cache01.example.com
+
+# Development servers
+dev-web01.example.com
+dev-db01.example.com
+
+# Testing servers
+test-web01.example.com
+test-api01.example.com
+
+# Load balancers
+lb01.example.com
+lb02.example.com
+
+# Non-existent servers (will fail ping)
+offline-server.example.com
+decommissioned.example.com
+192.168.100.254
+10.11.12.13
+
+# External reference servers
+google.com
+cloudflare.com
+https://cilt.uct.ac.za/
+https://www.monatemedia.com/
+https://www.takealot.com/
