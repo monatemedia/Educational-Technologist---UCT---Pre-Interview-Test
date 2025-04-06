@@ -30,7 +30,7 @@
         
     - 128GB SSD storage or more for fast performance
         
-    - [VisionLC-HD "Livestream:Capture" Card](https://www.datapathltd.com/datapath-products/video-capture-cards/visionlc-range/) 
+    - [VisionLC-HD2 "Livestream:Capture" Card](https://www.datapathltd.com/datapath-products/video-capture-cards/visionlc-range/) 
         
     - Gigabit PCI Express Network Adapter
         
@@ -127,6 +127,8 @@
 - Plug the `Presentation PC` into the `PDU`. There are power points available.
     
 - Move the `Rifle Mic` and `Shure X2U` from the `Capture Agent` to the `Presentation PC` making it easy for the presenter to talk through their presentation from the `Presentation PC` desk.
+
+- Plug the `Presentation PC` into the `DSP` using an HDMI input to extract the audio signal and route it to the `Sony NX3` and external sound system.
     
 - Install a USB cable between the `Capture Agent` and the `DSP` to be able to record audio from the `Mic` and `Lapel Mic` without using the `Sony NX3` if video is not required. The `Capture Agent` and the `DSP` sit in the same rack.
     
