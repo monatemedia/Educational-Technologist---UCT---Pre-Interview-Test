@@ -7,9 +7,9 @@
 
 #### **1. The “Capture Agent” is used to record the video and audio, please name the devices or connections that are used as input sources.**
 
-- Sony NX3 Camera (SDI)
+- Sony NX3 Camera (HDMI)
     
-- Mic and Lapel Mic (XLR/SDI)
+- Mic and Lapel Mic (XLR/HDMI)
     
 - Rifle Mic (XLR/USB)
     
@@ -30,7 +30,7 @@
         
     - 128GB SSD storage or more for fast performance
         
-    - HDMI output for external display
+    - [VisionLC-HD "Livestream:Capture" Card](https://www.datapathltd.com/datapath-products/video-capture-cards/visionlc-range/) 
         
     - Gigabit PCI Express Network Adapter
         
@@ -55,17 +55,15 @@
 
 - **Hardware:**
     
-    - Modern PC with at least Intel i7+ / AMD Ryzen 7+
+    - Modern PC with at least Intel i5+ / AMD Ryzen 5+
         
-    - 32GB RAM or more
+    - 16GB RAM or more
         
     - 1TB+ NVMe SSD storage for fast performance
         
-	- Dedicated GPU (NVIDIA GeForce RTX 3060 or AMD Radeon RX 6600) for video rendering
+	- Dedicated GPU (NVIDIA GeForce RTX 3060 or AMD Radeon RX 6600) for video streaming
 	    
-    - VisionLC-HD2 Dual Channel "LiveStream:Capture" Card for HDMI input
-        
-    - VisionLC-SDI Single Channel "LiveStream:Capture" Card for SDI input
+    - 2 X VisionLC-HD2 Dual Channel "LiveStream:Capture" Cards for HDMI input
         
     - Gigabit PCI Express Network Adapter  for Opencast integration
         
@@ -83,31 +81,43 @@
 
 #### **5. Explain why an SDI cable is used between the Capture Agent and the Camera?**
 
-- SDI (Serial Digital Interface) supports higher-quality video transmission than HDMI.
-    
-- It allows longer cable runs without signal degradation (100m VS 3m for HDMI).
-    
-- It supports embedded audio and timecode, reducing cable clutter and capturing additional data.
-    
-- It provides a secure twist-lock locking mechanism for professional setups.
-    
-- It carries high-quality uncompressed video signals
-    
-- It's more reliable in professional settings compared to consumer alternatives
-    
+- The [Sony NX3 specifications](https://cvp.com/product/sony_hxr-nx3?srsltid=AfmBOoo5P7S7E6uRau05TuaN5KFA1v2UFQ33eDZnMh0Tr-MccI_1AWuW) say that this camera does not have an SDI input so we are not able to use the `SDI Coax - 15m` cable or the `VisionLC SDI` Single Channel "LiveStream:Capture" Card with this camera. Because cameras are expensive equipment, to save costs, I would instead:
+
+    - Replace the `SDI Coax - 15m` with a 15m HDMI cable
+
+    - Replace the `VisionLC SDI` Single Channel "LiveStream:Capture" Card with a [VisionLC-HD or VisionLC-HD2 "Livestream:Capture" Card](https://www.datapathltd.com/datapath-products/video-capture-cards/visionlc-range/). I like the `VisionLC-HD2` better, because if one of the HDMI ports or capture cards should fail, we have redundency to continue operation while placing an order for a replacement card. 
+
+> [!QUESTION]
+> 
+> ### Using A 2-in-1-out HDMI Switch Instead?
+> 
+> Instead of fitting a second `VisionLC-HD2` card, we could instead insert a 2-in-1-out HDMI switch that accepts inputs from the `HDMI Splitter` and `PT-752` and output to slot number one on the existing `VisionLC HD2` card with the `Sony NX3` using slot number two on the card, however, 
+> - I prefer to cleanly terminate both HDMI inputs seperately inside the `Capture Agent` and handle choosing the input source from the OpenCast Studio software.
+> - Because we already have the `HDMI Splitter` upstream, introducing a HDMI switch here as well increases complexity and the possibility of signal issues.
+> - I assume that we prefer using `VisionLC HD2` cards. I also like keeping a shorter inventry list.
+
+
+> [!CAUTION]
+> 
+> ### What is the maximum length for an HDMI cable without signal loss?
+> 
+> The maximum recommended length for an HDMI cable without signal loss is usually around 50 feet (15 meters). Beyond this length, you may begin to experience signal degradation, which may result in poor image and sound quality. To maintain signal integrity at longer distances, consider using active HDMI cables or signal repeaters.
+> 
+> [Source](https://ventiontech.com/blogs/technology-overview/how-long-can-an-hdmi-cable-be-the-maximum-length-of-an-hdmi)
+
 
 #### **6. The PT-752 and PT-751 takes an HDMI signal as input and converts it to CAT, why would this be required in this setup?**
 
-- CAT (Ethernet cable) allows for long-distance transmission of HDMI signals.
+- CAT (Ethernet cable) allows for long-distance transmission of HDMI signals up to 100 meters (328 feet).
     
-- It reduces signal degradation compared to long HDMI cables.
+- It reduces signal degradation compared to long HDMI cables which can only travel up to 15 meters for a standard cable.
     
-- It is cost-effective and easier to install in large venues.
+- `CAT 6E` cable is cost-effective and easier to install in large venues.
     
 
 #### **7. What is the difference between Stereo and Mono signal?**
 
-- **Stereo is a two-channel audio source, and Mono is a single-channel audio source.**
+- Stereo is a two-channel audio source, and Mono is a single-channel audio source.
     
 
 #### **8. From the diagram what future enhancement/automation/improvements would you recommend be implemented?**
