@@ -87,7 +87,7 @@
 
     - Replace the `VisionLC SDI` Single Channel "LiveStream:Capture" Card with a [VisionLC-HD or VisionLC-HD2 "Livestream:Capture" Card](https://www.datapathltd.com/datapath-products/video-capture-cards/visionlc-range/). I like the `VisionLC-HD2` better, because if one of the HDMI ports or capture cards should fail, we have redundency to continue operation while placing an order for a replacement card. 
 
-> [!QUESTION]
+> [!NOTE]
 > 
 > ### Using A 2-in-1-out HDMI Switch Instead?
 > 
